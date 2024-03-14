@@ -12,11 +12,7 @@ public class Cliente {
     private String name;
     private String cpf;
 
-    public Cliente (int id, String name, String cpf){
-        this.id = id;
-        this.name = name;
-        this.cpf = cpf;
-    }
+
 
 
 }
