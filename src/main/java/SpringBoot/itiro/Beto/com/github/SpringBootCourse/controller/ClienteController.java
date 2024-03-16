@@ -1,10 +1,7 @@
 package SpringBoot.itiro.Beto.com.github.SpringBootCourse.controller;
 
 import SpringBoot.itiro.Beto.com.github.SpringBootCourse.model.Cliente;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/cliente")
