@@ -29,11 +29,8 @@ public class ClienteService {
 
     // Métodos
 
-    // Criando um cliente
-    public void create(Cliente cliente) {
-        clienteRepository.save(cliente);
-    }
 
+    //GET
     // Buscando todos os clientes
     public List<Cliente> findAll() {
         return clienteRepository.findAll();
@@ -43,6 +40,17 @@ public class ClienteService {
     public Optional<Cliente> findById(Long id) {
         return clienteRepository.findById(id);
     }
+
+    //Buscando produto
+
+
+
+    // Criando um cliente
+    public void create(Cliente cliente) {
+        clienteRepository.save(cliente);
+    }
+
+
 
     // Atualizando um cliente
     public void update(Long id, Cliente cliente) {

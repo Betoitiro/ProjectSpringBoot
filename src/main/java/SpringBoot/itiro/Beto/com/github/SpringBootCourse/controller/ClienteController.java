@@ -16,10 +16,12 @@ public class ClienteController {
     @Autowired
     ClienteService clienteService;
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public void create (@RequestBody Cliente cliente){
-        clienteService.create(cliente);
+
+    //metodos get
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Optional<Cliente> findByid(@PathVariable Long id){
+        return clienteService.findById(id);
     }
 
     @GetMapping("all")
@@ -28,10 +30,14 @@ public class ClienteController {
         return clienteService.findAll();
     }
 
-    @GetMapping("/{id}")
-    @ResponseStatus(HttpStatus.OK)
-    public Optional<Cliente> findByid(@PathVariable Long id){
-        return clienteService.findById(id);
+
+
+
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public void create (@RequestBody Cliente cliente){
+        clienteService.create(cliente);
     }
 
     @PutMapping("/{id}")
@@ -39,4 +45,13 @@ public class ClienteController {
     public void update(@RequestBody Cliente cliente, @PathVariable Long id){
         clienteService.update(id, cliente);
     }
+
+
+
+
+
+
+
+
+
 }
